@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Application Form{% endblock %}
+
+<!-- This page needs a form that can capture data about the user's
+first name, last name, job title, and salary requirements. -->
+{% block content %}
+<h1>Please Fill Out the Following</h1>
+
+<p>We would love to start the application process. First we will need some personal information from you. Please fill out all the the fields and press submit.<br>
+Thank You</p>
+
+<form action="/response" method='POST'>
+    First Name: <input type="text" name="firstname"></input><br>
+    Last Name: <input type="text" name="lastname"></input><br>
+    Salary Requirement: <input type="text" name="salary"></input><br>
+    Job You Are Applying For: <input type="radio" name="job" value="softwareEngineer">Software Engineer</input>
+    <input type="radio" name="job" value="QA Engineer" value="qaEngineer">QA Engineer</input>
+    <input type="radio" name="job" value="productManager">Product Manager</input></br>
+    <input type="submit">
+</form>
+{% endblock %}

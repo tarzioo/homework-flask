@@ -1,0 +1,19 @@
+/* Your styles can go here. */
+
+body {
+    background-color: aqua;
+}
+
+title {
+    font-weight: bold;
+    color: purple;
+}
+
+h1 {
+    font-weight: bold;
+    color: gray;
+}
+
+input, textarea {
+    background-color: yellow;
+}
