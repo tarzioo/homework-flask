@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_debugtoolbar import DebugToolbarExtension
 
 
@@ -27,20 +27,25 @@ def application_form():
 def application_response():
     """response to the application form"""
 
-    # firstname = request.form.get('firstname')
-    # lastname = request.form.get('lastname')
-    # job = request.form.get('job')
-    # salary = request.form.get('salary')
+    firstname = request.form.get('firstname')
+    lastname = request.form.get('lastname')
+    job = request.form.get('job')
+    salary = request.form.get('salary')
 
     # return render_template("application-response.html", firstname=firstname,
     # lastname=lastname, job=job, salary=salary)
 
-    firstname = request.form['firstname']
-    lastname = request.form['lastname']
-    job = request.form['job']
-    salary = request.form['salary']
+    # firstname = request.form.get('firstname')
+    # lastname = request.form.get['lastname')
+    # job = request.form.get['job']
+    # salary = request.form.get['salary']
 
-    return render_template('application-response.html')
+    # return render_template('application-response.html')
+    return render_template("application-response.html", 
+                            firstname=firstname,
+                            lastname=lastname, 
+                            job=job, 
+                            salary=salary)
 
 if __name__ == "__main__":
     # We have to set debug=True here, since it has to be True at the
